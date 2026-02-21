@@ -1,0 +1,862 @@
+< !DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Wholesale Terms & Partnership Guide — Puffy Companion</title><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"><style> :root {
+    --rose-dust: #F7EAE8;
+    --petal: #F2D6D3;
+    --blush-deep: #E8B4B0;
+    --rose-mid: #D4877A;
+    --terracotta: #C05545;
+    --deep-rose: #7A2E3A;
+    --warm-white: #FDF8F6;
+    --cream: #FAF3F0;
+    --ink: #3A2828;
+    --deep: #2A1818;
+    --gold: #C49A6C;
+    --sage: #8EA48A;
+    --border: rgba(192, 85, 69, 0.12);
+    --border-mid: rgba(192, 85, 69, 0.20);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+}
+
+/* ── TOP BAR ──────────────────────────────────────────────── */
+.topbar {
+    background: var(--deep);
+    padding: 14px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.topbar-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.topbar-logo span {
+    color: var(--blush-deep);
+    font-style: italic;
+}
+
+.topbar-links {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.topbar-links a {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.45);
+    text-decoration: none;
+    letter-spacing: 0.07em;
+    transition: color 0.2s;
+}
+
+.topbar-links a:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.topbar-cta {
+    background: var(--terracotta) !important;
+    color: #fff !important;
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.print-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.55);
+    padding: 7px 16px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.06em;
+    transition: all 0.2s;
+}
+
+.print-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+/* ── HERO BANNER ──────────────────────────────────────────── */
+.terms-hero {
+    background: var(--deep);
+    padding: 80px 60px 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.terms-hero::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -80px;
+    width: 440px;
+    height: 440px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(192, 85, 69, 0.14) 0%, transparent 70%);
+}
+
+.terms-hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: 40%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(232, 180, 176, 0.07) 0%, transparent 70%);
+}
+
+.terms-hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.terms-hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--blush-deep);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.terms-hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 1px;
+    background: var(--blush-deep);
+}
+
+.terms-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 4.5vw, 62px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.08;
+    margin-bottom: 20px;
+}
+
+.terms-hero h1 em {
+    font-style: italic;
+    color: var(--blush-deep);
+}
+
+.terms-hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    max-width: 640px;
+    margin-bottom: 40px;
+}
+
+.terms-meta {
+    display: flex;
+    gap: 36px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terms-meta-item {}
+
+.terms-meta-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.28);
+    margin-bottom: 5px;
+}
+
+.terms-meta-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* ── LAYOUT: SIDEBAR + CONTENT ───────────────────────────── */
+.terms-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 0;
+    padding: 0 60px 80px;
+}
+
+/* ── SIDEBAR TOC ──────────────────────────────────────────── */
+.terms-sidebar {
+    padding: 48px 0 48px;
+    border-right: 1px solid var(--border);
+    position: sticky;
+    top: 56px;
+    /* topbar height */
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+}
+
+.toc-title {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-right: 24px;
+}
+
+.toc-list {
+    list-style: none;
+}
+
+.toc-item {}
+
+.toc-link {
+    display: block;
+    padding: 9px 24px 9px 0;
+    font-size: 12px;
+    color: var(--ink);
+    opacity: 0.45;
+    text-decoration: none;
+    line-height: 1.45;
+    border-left: 2px solid transparent;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.toc-link:hover {
+    opacity: 0.8;
+    color: var(--terracotta);
+}
+
+.toc-link.active {
+    opacity: 1;
+    color: var(--terracotta);
+    border-left: 2px solid var(--terracotta);
+    padding-left: 12px;
+    font-weight: 600;
+}
+
+.toc-num {
+    font-size: 10px;
+    opacity: 0.55;
+    margin-right: 6px;
+    font-family: 'Playfair Display', serif;
+}
+
+.toc-sep {
+    height: 1px;
+    background: var(--border);
+    margin: 14px 24px 14px 0;
+}
+
+/* ── MAIN CONTENT ─────────────────────────────────────────── */
+.terms-content {
+    padding: 56px 0 56px 64px;
+}
+
+/* ── OPENER CALLOUT ───────────────────────────────────────── */
+.opener-callout {
+    background: var(--deep);
+    border-radius: 18px;
+    padding: 44px 48px;
+    margin-bottom: 64px;
+    position: relative;
+    overflow: hidden;
+}
+
+.opener-callout::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(192, 85, 69, 0.1);
+}
+
+.opener-callout-eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--blush-deep);
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.opener-callout p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+
+.opener-callout p:last-of-type {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.50);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ── SECTION BLOCKS ───────────────────────────────────────── */
+.terms-section {
+    margin-bottom: 72px;
+    scroll-margin-top: 80px;
+}
+
+.section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--terracotta);
+    opacity: 0.18;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 56px;
+}
+
+.section-title-group {}
+
+.section-tag {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 2.5vw, 30px);
+    color: var(--deep);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.section-title em {
+    font-style: italic;
+    color: var(--terracotta);
+}
+
+/* Body text inside sections */
+.terms-section p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--ink);
+    opacity: 0.72;
+    margin-bottom: 18px;
+}
+
+.terms-section p:last-child {
+    margin-bottom: 0;
+}
+
+.terms-section p strong {
+    color: var(--deep);
+    opacity: 1;
+    font-weight: 600;
+}
+
+.terms-section a {
+    color: var(--terracotta);
+}
+
+/* Clause cards — key terms presented visually */
+.clause-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.clause-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    border-left: 4px solid var(--terracotta);
+}
+
+.clause-card.sage {
+    border-left-color: var(--sage);
+}
+
+.clause-card.gold {
+    border-left-color: var(--gold);
+}
+
+.clause-label {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+.clause-card.sage .clause-label {
+    color: var(--sage);
+}
+
+.clause-card.gold .clause-label {
+    color: var(--gold);
+}
+
+.clause-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--deep);
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.clause-detail {
+    font-size: 13px;
+    color: var(--ink);
+    opacity: 0.58;
+    line-height: 1.6;
+}
+
+/* Clause table (for pricing tiers, etc.) */
+.clause-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.clause-table th {
+    background: var(--deep);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 13px 18px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.clause-table td {
+    padding: 13px 18px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink);
+    opacity: 0.78;
+}
+
+.clause-table tr:last-child td {
+    border-bottom: none;
+}
+
+.clause-table tr:nth-child(even) td {
+    background: var(--rose-dust);
+    opacity: 1;
+}
+
+.clause-table .highlight {
+    color: var(--terracotta);
+    font-weight: 600;
+    opacity: 1 !important;
+}
+
+/* Inline bullet-style clauses */
+.clause-list {
+    list-style: none;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.clause-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink);
+    opacity: 0.7;
+}
+
+.clause-list li::before {
+    content: '—';
+    color: var(--terracotta);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* Warning / highlight note */
+.terms-note {
+    background: var(--rose-dust);
+    border: 1px solid var(--border-mid);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.terms-note-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.terms-note-body {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink);
+    opacity: 0.72;
+}
+
+.terms-note-body strong {
+    color: var(--deep);
+    opacity: 1;
+}
+
+/* Quote pull */
+.terms-quote {
+    border-left: 4px solid var(--terracotta);
+    padding: 18px 28px;
+    margin: 28px 0;
+}
+
+.terms-quote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--deep);
+    opacity: 0.8 !important;
+    margin: 0;
+    line-height: 1.55;
+}
+
+.terms-quote-source {
+    font-size: 11px;
+    color: var(--terracotta);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 8px;
+    font-weight: 600;
+    display: block;
+}
+
+/* ── DIVIDER ─────────────────────────────────────────────── */
+.terms-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0 0 64px;
+}
+
+/* ── PROCESS STEPS ───────────────────────────────────────── */
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 24px 0;
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 20px;
+    padding-bottom: 32px;
+    position: relative;
+}
+
+.process-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 46px;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+}
+
+.process-step-num {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.process-step-body {
+    padding-top: 10px;
+}
+
+.process-step-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--deep);
+    margin-bottom: 7px;
+}
+
+.process-step-desc {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink);
+    opacity: 0.62;
+}
+
+/* ── FINAL CTA SECTION ───────────────────────────────────── */
+.terms-cta {
+    background: var(--deep);
+    border-radius: 20px;
+    padding: 56px 48px;
+    text-align: center;
+    margin-top: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.terms-cta::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(192, 85, 69, 0.15) 0%, transparent 70%);
+}
+
+.terms-cta h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 3vw, 40px);
+    color: #fff;
+    margin-bottom: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.terms-cta h3 em {
+    font-style: italic;
+    color: var(--blush-deep);
+}
+
+.terms-cta p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.52);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.terms-cta-btns {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary {
+    background: var(--terracotta);
+    color: #fff;
+    padding: 15px 34px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #9e3a2a;
+    transform: translateY(-2px);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 15px 34px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #fff;
+}
+
+/* ── PRINT STYLES ─────────────────────────────────────────── */
+@media print {
+
+    .topbar,
+    .terms-sidebar,
+    .terms-cta,
+    .print-btn,
+    .topbar-cta {
+        display: none !important;
+    }
+
+    .terms-layout {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .terms-content {
+        padding: 0;
+    }
+
+    body {
+        background: #fff;
+    }
+
+    .terms-hero {
+        background: var(--deep);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width:960px) {
+    .terms-layout {
+        grid-template-columns: 1fr;
+        padding: 0 24px 60px;
+    }
+
+    .terms-sidebar {
+        display: none;
+    }
+
+    .terms-content {
+        padding: 40px 0;
+    }
+
+    .topbar {
+        padding: 14px 24px;
+    }
+
+    .terms-hero {
+        padding: 60px 24px 50px;
+    }
+
+    .clause-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .opener-callout {
+        padding: 32px 28px;
+    }
+}
+
+</style></head><body>< !-- TOP BAR --><div class="topbar"><a href="puffy-main.html" class="topbar-logo">Puffy<span>Companion</span></a><div class="topbar-links"><a href="puffy-main.html">← Back to Wholesale Home</a><a href="puffy-main.html#collection">Collection</a><button class="print-btn" onclick="window.print()">⎙ Print / Save PDF</button><a href="puffy-main.html#booking" class="topbar-links topbar-cta">Book a Call →</a></div></div>< !-- HERO --><div class="terms-hero"><div class="terms-hero-inner"><div class="terms-hero-eyebrow">Wholesale Partnership Programme</div><h1>Wholesale Terms &<br><em>Partnership Guide</em></h1><p class="terms-hero-sub">These terms are designed to protect your investment,
+your margins,
+and the exclusivity that makes Puffy Companion worth stocking.</p><div class="terms-meta"><div class="terms-meta-item"><div class="terms-meta-label">Effective Date</div><div class="terms-meta-value">January 2026</div></div><div class="terms-meta-item"><div class="terms-meta-label">Version</div><div class="terms-meta-value">Season 1 — 2026</div></div><div class="terms-meta-item"><div class="terms-meta-label">Enquiries</div><div class="terms-meta-value">puffycompanion@gmail.com</div></div><div class="terms-meta-item"><div class="terms-meta-label">Response Time</div><div class="terms-meta-value">Within 24 hours</div></div></div></div></div>< !-- LAYOUT --><div class="terms-layout">< !-- SIDEBAR --><nav class="terms-sidebar"><div class="toc-title">Contents</div><ul class="toc-list"><li class="toc-item"><a class="toc-link active" href="#s-philosophy" onclick="setActive(this)"><span class="toc-num">01.</span>Partnership Philosophy</a></li><li class="toc-item"><a class="toc-link" href="#s-eligibility" onclick="setActive(this)"><span class="toc-num">02.</span>Who We Partner With</a></li><li class="toc-item"><a class="toc-link" href="#s-onboarding" onclick="setActive(this)"><span class="toc-num">03.</span>Application & Onboarding</a></li><div class="toc-sep"></div><li class="toc-item"><a class="toc-link" href="#s-pricing" onclick="setActive(this)"><span class="toc-num">04.</span>Wholesale Pricing</a></li><li class="toc-item"><a class="toc-link" href="#s-moq" onclick="setActive(this)"><span class="toc-num">05.</span>Order Minimums</a></li><li class="toc-item"><a class="toc-link" href="#s-payment" onclick="setActive(this)"><span class="toc-num">06.</span>Payment Terms</a></li><div class="toc-sep"></div><li class="toc-item"><a class="toc-link" href="#s-map" onclick="setActive(this)"><span class="toc-num">07.</span>MAP Policy</a></li><li class="toc-item"><a class="toc-link" href="#s-territory" onclick="setActive(this)"><span class="toc-num">08.</span>Territory & Exclusivity</a></li><li class="toc-item"><a class="toc-link" href="#s-online" onclick="setActive(this)"><span class="toc-num">09.</span>Online Sales Policy</a></li><div class="toc-sep"></div><li class="toc-item"><a class="toc-link" href="#s-leadtime" onclick="setActive(this)"><span class="toc-num">10.</span>Lead Times & Production</a></li><li class="toc-item"><a class="toc-link" href="#s-quality" onclick="setActive(this)"><span class="toc-num">11.</span>Quality & Handmade Variation</a></li><li class="toc-item"><a class="toc-link" href="#s-shipping" onclick="setActive(this)"><span class="toc-num">12.</span>Shipping & Delivery</a></li><li class="toc-item"><a class="toc-link" href="#s-returns" onclick="setActive(this)"><span class="toc-num">13.</span>Returns & Defects</a></li><div class="toc-sep"></div><li class="toc-item"><a class="toc-link" href="#s-ip" onclick="setActive(this)"><span class="toc-num">14.</span>Intellectual Property</a></li><li class="toc-item"><a class="toc-link" href="#s-marketing" onclick="setActive(this)"><span class="toc-num">15.</span>Marketing Support</a></li><li class="toc-item"><a class="toc-link" href="#s-seasonal" onclick="setActive(this)"><span class="toc-num">16.</span>Seasonal Collections</a></li><li class="toc-item"><a class="toc-link" href="#s-benefits" onclick="setActive(this)"><span class="toc-num">17.</span>Partner Benefits</a></li><li class="toc-item"><a class="toc-link" href="#s-term" onclick="setActive(this)"><span class="toc-num">18.</span>Term & Termination</a></li></ul></nav>< !-- MAIN CONTENT --><main class="terms-content">< !-- OPENER CALLOUT --><div class="opener-callout"><div class="opener-callout-eyebrow">A note before we begin</div><p>"These terms exist not to complicate our relationship — but to protect it. When your margins are protected and your territory is yours, you sell with confidence. When we both operate by the same rules, neither of us wins at the other's expense." </p><p>We have written this document to be read by a real person, not a legal team. Everything here has a reason, and we are always happy to explain it on a call.</p></div>< !-- ── 01. PARTNERSHIP PHILOSOPHY ──────────────────────── --><section class="terms-section" id="s-philosophy"><div class="section-header"><div class="section-num">01</div><div class="section-title-group"><div class="section-tag">Foundation</div><h2 class="section-title">Partnership <em>Philosophy</em></h2></div></div><p>Puffy Companion is built on a belief that genuine craft deserves genuine retail. We do not sell through mass channels. We do not race to the bottom on price. We make each companion by hand, in Istanbul, one stitch at a time — and we look for retail partners who understand that what sits on their shelf is not just a product, but a statement about what their store stands for.</p><p>This is not a volume game. Our wholesale programme is intentionally selective and intentionally limited. Every partner who carries Puffy Companion has been considered individually, because we want each stockist to succeed — not just with their first order, but for every season that follows.</p><p>These terms are the foundation of that relationship. They are clear, they are fair, and they are designed to make you confident that stocking Puffy Companion is a decision you will not regret. If anything here seems unclear, we would rather explain it in a conversation than have you sign something you do not fully understand.</p><div class="terms-quote"><p>"We do not want a thousand retailers. We want a hundred who genuinely love what we make, and whose customers feel that love every time they reach for one of our companions." </p><span class="terms-quote-source">— Zehra, Founder · Puffy Companion</span></div></section><hr class="terms-divider">< !-- ── 02. WHO WE PARTNER WITH ──────────────────────────── --><section class="terms-section" id="s-eligibility"><div class="section-header"><div class="section-num">02</div><div class="section-title-group"><div class="section-tag">Eligibility</div><h2 class="section-title">Who We <em>Partner With</em></h2></div></div><p>Puffy Companion companions find their best home in retail environments where the story of a product can be told — where a shop assistant can hold one up, explain the emotion it carries, and watch a customer's face change. We partner with a wide range of retailers, provided they share a commitment to considered, curated retail.</p>
+ <p>We actively welcome the following types of retail partners:</p><ul class="clause-list"><li><strong>Independent boutiques and gift shops</strong>— any size, any city, provided the product is a good fit for your customer.</li><li><strong>Craft fair and market exhibitors</strong>— traders with regular pitch presence at established markets, fairs, or pop-ups.</li><li><strong>Department stores and concept stores</strong>— buyers from curated floor sections who can commit to appropriate display and sell-through.</li><li><strong>Museum shops, gallery shops, and cultural institutions</strong>— venues with high footfall and discerning gift-buying audiences.</li><li><strong>Hospital and wellness gift shops</strong>— where the emotional dimension of our companions is especially meaningful.</li><li><strong>Baby, children's, and nursery specialists</strong> — for the gift and newborn categories (decorative use positioning recommended for under-3 display).</li>
+ <li><strong>Approved online retailers</strong>— independent online shops with an established brand presence and an explicit agreement not to sell via Amazon or other mass marketplaces.</li></ul><p>We do not partner with retailers whose primary channel is Amazon, eBay, Walmart, or any equivalent mass marketplace. We do not partner with retailers who primarily compete on price rather than curation. These are not judgements — they are a necessary condition for protecting the exclusivity that every other partner has been promised.</p></section><hr class="terms-divider">< !-- ── 03. APPLICATION & ONBOARDING ─────────────────────── --><section class="terms-section" id="s-onboarding"><div class="section-header"><div class="section-num">03</div><div class="section-title-group"><div class="section-tag">Process</div><h2 class="section-title">Application & <em>Onboarding</em></h2></div></div><p>Becoming a Puffy Companion retail partner follows a straightforward process. We aim to move from first contact to confirmed first order in under two weeks — faster if your order window aligns with current production capacity.</p><div class="process-steps"><div class="process-step"><div class="process-step-num">1</div><div class="process-step-body"><div class="process-step-title">Submit an enquiry or book a buyer call</div><div class="process-step-desc">Complete the form on our wholesale page, or book a 30-minute call directly through Calendly. Tell us a little about your shop — what you stock, who your customers are, and why you think Puffy Companion belongs on your shelves.</div></div></div><div class="process-step"><div class="process-step-num">2</div><div class="process-step-body"><div class="process-step-title">Receive the full lookbook and pricing catalogue</div><div class="process-step-desc">Within 24 hours of your enquiry, you will receive our current season's lookbook — high-resolution photography, full character descriptions, wholesale pricing, and suggested retail pricing for every SKU.</div>
+ </div></div><div class="process-step"><div class="process-step-num">3</div><div class="process-step-body"><div class="process-step-title">Buyer call or Q&A exchange</div><div class="process-step-desc">We will schedule a call to walk you through the collection, discuss your space and customer profile, and answer any questions about terms, lead times, or production. If you prefer to exchange questions by email, that works equally well.</div></div></div><div class="process-step"><div class="process-step-num">4</div><div class="process-step-body"><div class="process-step-title">Place your opening order</div><div class="process-step-desc">Once both parties are ready, we issue a formal wholesale order confirmation with itemised pricing, delivery timeline, and payment instructions. A 50% deposit confirms your place in production. The balance is due before dispatch.</div></div></div><div class="process-step"><div class="process-step-num">5</div><div class="process-step-body"><div class="process-step-title">Launch support & ongoing partnership</div><div class="process-step-desc">On delivery, you receive your order plus a welcome pack: a physical brand story card set, digital marketing assets, and a direct line to your wholesale contact. We check in after your first four weeks to support your initial sell-through.</div></div></div></div></section><hr class="terms-divider">< !-- ── 04. WHOLESALE PRICING ─────────────────────────────── --><section class="terms-section" id="s-pricing"><div class="section-header"><div class="section-num">04</div><div class="section-title-group"><div class="section-tag">Commercial</div><h2 class="section-title">Wholesale <em>Pricing</em></h2></div></div><p>Our wholesale pricing is structured to give you a healthy retail margin across all character tiers, with room to run occasional promotional activity while remaining above your cost price. The standard keystone markup (your retail price being approximately 2.2–2.5× your wholesale cost) is built into our recommended retail prices.</p><p>Full pricing is provided in the wholesale lookbook. The table below shows indicative tier structure. All prices are in GBP (UK/EU partners) and USD (US/international partners). Other currencies available on request.</p><table class="clause-table"><thead><tr><th>Companion Tier</th><th>Wholesale (GBP)</th><th>Wholesale (USD)</th><th>Suggested Retail</th><th>Margin</th></tr></thead><tbody><tr><td><strong>Core Collection</strong>(standard characters)</td><td class="highlight">£14.00–£18.00</td><td class="highlight">$18–$23</td><td>£32–£42 / $40–$52</td><td>~55%</td></tr><tr><td><strong>Seasonal Edition</strong>(limited drops)</td><td class="highlight">£16.00–£22.00</td><td class="highlight">$20–$28</td><td>£38–£52 / $46–$65</td><td>~57%</td></tr><tr><td><strong>Gift Set</strong>(boxed pairs or trios)</td><td class="highlight">£32.00–£44.00</td><td class="highlight">$40–$55</td><td>£75–£100 / $92–$128</td><td>~57%</td></tr><tr><td><strong>Custom / Bespoke</strong>(on application)</td><td colspan="4" style="text-align:center; font-style:italic; opacity:0.55">Quoted individually — contact us to discuss</td></tr></tbody></table><div class="terms-note"><div class="terms-note-icon">💡</div><div class="terms-note-body">Prices are reviewed each season and may adjust modestly to reflect material and production cost changes. Existing partners are notified a minimum of <strong>8 weeks before</strong>any price change takes effect, ensuring you can plan your buying accordingly.</div></div></section><hr class="terms-divider">< !-- ── 05. ORDER MINIMUMS ──────────────────────────────────── --><section class="terms-section" id="s-moq"><div class="section-header"><div class="section-num">05</div><div class="section-title-group"><div class="section-tag">Orders</div><h2 class="section-title">Order <em>Minimums</em></h2></div></div><p>We have designed our minimums to be genuinely accessible — especially for independent boutiques and first-time wholesale buyers. Our goal is for you to test the range at a scale that feels comfortable, sell through confidently, and then grow your order with conviction.</p><div class="clause-grid"><div class="clause-card"><div class="clause-label">Opening Order</div><div class="clause-value">6 units minimum</div><div class="clause-detail">Your very first order with us. Mix characters freely — you do not need to commit to single characters in volume.</div></div><div class="clause-card sage"><div class="clause-label">Reorder Minimum</div><div class="clause-value">4 units</div><div class="clause-detail">After your opening order, reorders are flexible. Replenish only what's selling, in any character combination you choose.</div>
+ </div><div class="clause-card gold"><div class="clause-label">Seasonal Pre-order</div><div class="clause-value">12 units</div><div class="clause-detail">Seasonal collections (Christmas, Valentine's, Spring) are available for pre-order. Minimum 12 units secures your allocation from the limited production run.</div>
+ </div> <div class="clause-card" > <div class="clause-label" >Mix & Match Policy</div> <div class="clause-value" >Fully flexible</div> <div class="clause-detail" >There are no per-character minimums. Every order can be any combination of characters, tiers, and gift formats — ordered to your exact needs.</div> </div> </div> <p>We recognise that handmade wholesale and fast-fashion wholesale are fundamentally different buying experiences. You do not need to overcommit. Our average returning partner reorders every 4–6 weeks because demand genuinely supports it — not because we require it.</p> </section> <hr class="terms-divider" > < !-- ── 06. PAYMENT TERMS ───────────────────────────────────── --> <section class="terms-section" id="s-payment" > <div class="section-header" > <div class="section-num" >06</div> <div class="section-title-group" > <div class="section-tag" >Commercial</div> <h2 class="section-title" >Payment <em>Terms</em></h2> </div> </div> <p>Our payment structure is straightforward and designed to be fair to both parties. Because each order is handmade to specification, the deposit confirms your production slot and covers materials. The balance ensures the order is complete before it leaves our studio.</p> <div class="clause-grid" > <div class="clause-card" > <div class="clause-label" >Deposit</div> <div class="clause-value" >50% on order</div> <div class="clause-detail" >Due within 5 business days of receiving your order confirmation. This secures your production slot and allocates your characters.</div> </div> <div class="clause-card sage" > <div class="clause-label" >Balance</div> <div class="clause-value" >50% before dispatch</div> <div class="clause-detail" >Due before your order is shipped. We will notify you when your order is ready and provide dispatch photos for your peace of mind.</div> </div> </div> <p><strong>Accepted payment methods:</strong> Bank transfer (SWIFT/SEPA), Wise (TransferWise), and PayPal (for orders under £500 / $600). All bank details are provided on your order confirmation document. We do not charge processing fees on any payment method.</p> <p><strong>Currency:</strong> We invoice in GBP for UK and EU partners, and in USD for US, Canadian, and Australian partners. Other currencies can be accommodated — please ask when placing your order.</p> <div class="terms-note" > <div class="terms-note-icon" >🔒</div> <div class="terms-note-body" ><strong>Payment security:</strong> We will never ask you to transfer funds to a personal account or through an unofficial channel. All invoices come from an official Puffy Companion email address. If you receive an unusual payment request, contact us directly before transferring anything.</div> </div> </section> <hr class="terms-divider" > < !-- ── 07. MAP POLICY ─────────────────────────────────────── --> <section class="terms-section" id="s-map" > <div class="section-header" > <div class="section-num" >07</div> <div class="section-title-group" > <div class="section-tag" >Price Protection</div> <h2 class="section-title" >Minimum Advertised Price <em>Policy</em></h2> </div> </div> <p>The MAP (Minimum Advertised Price) policy is one of the most important protections we offer our retail partners. It exists to ensure that no stockist can undercut another — and that your investment in Puffy Companion always returns the margin you were promised.</p> <p>Every retail partner agrees to advertise and sell all Puffy Companion products at or above the MAP. MAP is set at the suggested retail price published in our current wholesale catalogue. This applies across all channels: in-store, your own website, any third-party platform, and any advertised promotion.</p> <ul class="clause-list" > <li>MAP is <strong>non-negotiable</strong> and applies to all retail partners equally, regardless of order volume or relationship length.</li> <li>Temporary "sale" pricing is permitted <strong>only</strong> during universally recognised retail events (e.g. Black Friday, Boxing Day sales) and must not drop below 80% of MAP for more than 5 consecutive days.</li> <li>Private customer discounts offered in-store at point of sale (e.g. loyalty rewards, staff discount) are not subject to MAP, provided they are not advertised publicly.</li> <li>Violating the MAP policy will result in a formal warning followed by suspension of ordering rights if the violation is not corrected within 7 days.</li> </ul> <div class="terms-note" > <div class="terms-note-icon" >🌸</div> <div class="terms-note-body" ><strong>Why this matters for you:</strong> MAP protects your shelf price. Without it, a single high-volume reseller could undercut you online and make your stock harder to sell at full price. By enforcing MAP for every partner, we ensure that the price you charge is the price every customer pays — wherever they find our companions.</div> </div> </section> <hr class="terms-divider" > < !-- ── 08. TERRITORY & EXCLUSIVITY ───────────────────────── --> <section class="terms-section" id="s-territory" > <div class="section-header" > <div class="section-num" >08</div> <div class="section-title-group" > <div class="section-tag" >Exclusivity</div> <h2 class="section-title" >Territory & <em>Exclusivity</em></h2> </div> </div> <p>We intentionally limit the number of retail partners per city and per region. This is not an operational constraint — it is a deliberate decision to protect the value of our product for every partner who carries it. If customers can walk five minutes to find the same companion elsewhere, it diminishes the reason to visit your shop specifically.</p> <p>Territory protection works as follows:</p> <ul class="clause-list" > <li><strong>Soft territory</strong> (default for all partners): we commit to not actively approaching other retailers in your immediate area (typically defined as a 5-mile / 8km radius for city shops, or a county-level radius for rural or market town partners) without first informing you.</li> <li><strong>Exclusive territory</strong> (available on application): a formal exclusivity agreement for a defined geographic area. Exclusive territory partners commit to a higher seasonal minimum and a multi-season partnership. Available in most markets — contact us to discuss your area.</li> <li>Territory protection does not prevent customers in your area from purchasing through an approved online retailer. It applies to physical stockists only.</li> <li>Territory is reviewed annually and tied to continued ordering activity. Partners who have not placed an order in the preceding 6 months may have their territory protection suspended.</li> </ul> <div class="terms-note" > <div class="terms-note-icon" >📍</div> <div class="terms-note-body" ><strong>First-mover advantage:</strong> early Season 1 partners have first access to territorial exclusivity in their markets. As we expand into UK, US, German, and French retail, the most desirable territories will fill quickly. If protecting your area matters to you, raise it at your onboarding call.</div> </div> </section> <hr class="terms-divider" > < !-- ── 09. ONLINE SALES POLICY ───────────────────────────── --> <section class="terms-section" id="s-online" > <div class="section-header" > <div class="section-num" >09</div> <div class="section-title-group" > <div class="section-tag" >Digital Channels</div> <h2 class="section-title" >Online Sales <em>Policy</em></h2> </div> </div> <p>Puffy Companion is — and will remain — <strong>never listed on Amazon, eBay, Walmart Marketplace, Etsy by third parties, or any equivalent mass-market platform.</strong> This applies to us as the manufacturer and to all retail partners. This policy is absolute and non-negotiable.</p> <p>The reason is simple: our companions command a premium price because they feel exclusive. The moment they appear on Amazon, that perception is irreparably damaged — and every retail partner who invested in carrying us is harmed. This is a protection for you, not a restriction on you.</p> <p><strong>What online selling is permitted:</strong></p> <ul class="clause-list" > <li>Selling through your own branded website or webshop, provided you adhere to MAP pricing and use our supplied photography and copy.</li> <li>Selling through Faire, if you are an active Faire retailer — however, you must not list below MAP and must ensure the listing reflects the brand accurately. Notify us when you list on Faire so we can support your page.</li> <li>Selling through approved curated platforms (e.g. Not on the High Street, Uncommon Goods, Wolf & Badger) — please request approval before listing on any third-party platform.</li> </ul> <p>Any partner found selling through Amazon or equivalent mass platforms will have their wholesale account suspended immediately and without prior warning. Existing stock becomes non-returnable in this circumstance.</p> </section> <hr class="terms-divider" > < !-- ── 10. LEAD TIMES & PRODUCTION ───────────────────────── --> <section class="terms-section" id="s-leadtime" > <div class="section-header" > <div class="section-num" >10</div> <div class="section-title-group" > <div class="section-tag" >Production</div> <h2 class="section-title" >Lead Times & <em>Production</em></h2> </div> </div> <p>Every Puffy Companion is handcrafted by skilled artisans in Istanbul. Lead times reflect genuine handmade production — not warehoused stock sitting in a factory. This is what makes these companions extraordinary, and it is also why planning ahead rewards you.</p> <div class="clause-grid" > <div class="clause-card" > <div class="clause-label" >Standard Lead Time</div> <div class="clause-value" >4–6 weeks</div> <div class="clause-detail" >From deposit receipt to dispatch. Confirmed at order placement based on current production schedule.</div> </div> <div class="clause-card sage" > <div class="clause-label" >Seasonal Pre-order Lead Time</div> <div class="clause-value" >8–10 weeks</div> <div class="clause-detail" >Christmas and Valentine's collections open for pre-order in August and November respectively. Pre-ordering guarantees your allocation before the general release.</div>
+ </div> <div class="clause-card gold" > <div class="clause-label" >Rush / Priority Production</div> <div class="clause-value" >On request</div> <div class="clause-detail" >Subject to production availability. A priority production supplement may apply. Contact us — we will always try to help where we can.</div> </div> <div class="clause-card" > <div class="clause-label" >Production Updates</div> <div class="clause-value" >Weekly by email</div> <div class="clause-detail" >You will receive a mid-production update with photos of your order in progress, and a dispatch notification with tracking details.</div> </div> </div> <p>We communicate proactively about any production delay of more than 3 business days. In the event of a significant delay (more than 10 days beyond the confirmed lead time), you have the right to cancel your order and receive a full deposit refund. In practice, delays of this nature are rare — our production team plans capacity conservatively and communicates early.</p> </section> <hr class="terms-divider" > < !-- ── 11. QUALITY & HANDMADE VARIATION ──────────────────── --> <section class="terms-section" id="s-quality" > <div class="section-header" > <div class="section-num" >11</div> <div class="section-title-group" > <div class="section-tag" >Quality</div> <h2 class="section-title" >Quality Standards & <em>Handmade Variation</em></h2> </div> </div> <p>Each Puffy Companion companion is handcrafted individually. This means that no two companions are perfectly identical — and that is precisely what makes them meaningful. Minor natural variations in stitch tension, colour shade, and proportion are inherent to the handmade process and are not considered defects. They are, in fact, proof of authenticity.</p> <p>We maintain rigorous quality standards across every companion we produce. Each piece goes through a three-stage quality review before dispatch: structural integrity (seams, filling, all limbs firmly attached), finish quality (no loose threads, clean yarn ends, correct emotion accessory placement), and character accuracy (face placement, proportion, and emotion card match).</p> <p><strong>What constitutes a handmade variation (accepted):</strong></p> <ul class="clause-list" > <li>Very slight differences in stitch density between individual companions of the same character.</li> <li>Minor shade variation in yarn colour between production batches (note: we source from consistent suppliers and batch variations are rare).</li> <li>Subtle differences in face positioning within an acceptable range.</li> </ul> <p><strong>What constitutes a defect (covered by our quality guarantee):</strong></p> <ul class="clause-list" > <li>Loose or detached limbs, eyes, or accessories at time of receipt.</li> <li>Seam failure or significant filling inconsistency.</li> <li>Significant colour or character mismatch from what was ordered.</li> <li>Any companion that would not pass a basic visual quality check at point of retail display.</li> </ul> </section> <hr class="terms-divider" > < !-- ── 12. SHIPPING & DELIVERY ────────────────────────────── --> <section class="terms-section" id="s-shipping" > <div class="section-header" > <div class="section-num" >12</div> <div class="section-title-group" > <div class="section-tag" >Logistics</div> <h2 class="section-title" >Shipping & <em>Delivery</em></h2> </div> </div> <p>We ship to retail partners worldwide. All orders are dispatched from Istanbul, Turkey using insured, tracked international courier services. We work with DHL, FedEx, and UPS depending on destination and order size — always prioritising reliability and traceability over cost.</p> <div class="clause-grid" > <div class="clause-card" > <div class="clause-label" >UK Partners</div> <div class="clause-value" >5–8 business days</div> <div class="clause-detail" >After dispatch. Fully tracked, insured. Duties and VAT are typically included in DDP (Delivered Duty Paid) arrangements — confirm at onboarding.</div> </div> <div class="clause-card sage" > <div class="clause-label" >EU Partners</div> <div class="clause-value" >5–10 business days</div> <div class="clause-detail" >After dispatch. EU partners may be subject to import VAT. We provide full documentation for customs clearance as standard.</div> </div> <div class="clause-card" > <div class="clause-label" >US & Canada</div> <div class="clause-value" >7–12 business days</div> <div class="clause-detail" >After dispatch. US partners are responsible for any applicable import duties. We provide a commercial invoice with accurate declared values.</div> </div> <div class="clause-card gold" > <div class="clause-label" >Shipping Cost</div> <div class="clause-value" >Buyer's account</div>
+ <div class="clause-detail" >Shipping is charged at cost — we do not mark up logistics. Exact shipping cost is confirmed in your order confirmation before you commit.</div> </div> </div> <p>Risk of loss transfers to the retail partner upon handover to the courier. We provide full tracking details and a dispatch confirmation email with photographs of your packed order. In the event of loss or damage in transit, we assist with the insurance claim and, where possible, prioritise replacement production.</p> </section> <hr class="terms-divider" > < !-- ── 13. RETURNS & DEFECTS ──────────────────────────────── --> <section class="terms-section" id="s-returns" > <div class="section-header" > <div class="section-num" >13</div> <div class="section-title-group" > <div class="section-tag" >After Delivery</div> <h2 class="section-title" >Returns & <em>Defects</em></h2> </div> </div> <p>Because each companion is handmade to order, we do not accept returns for change of mind or overstocking. We do, however, have a clear and fair policy for genuine defects and order errors — and we take pride in resolving these quickly and generously.</p> <p><strong>Inspection window:</strong> You have 7 business days from delivery to inspect your order and report any defects or discrepancies. Please photograph any affected items and email us at puffycompanion@gmail.com with your order number and photos.</p> <ul class="clause-list" > <li><strong>Defective companions:</strong> replaced free of charge in the next production run, or a credit note issued if replacement is preferred. Return of the defective item is not required in most cases.</li> <li><strong>Order errors</strong> (wrong character, wrong quantity): corrected at no cost including shipping. We bear full responsibility for order fulfilment errors.</li> <li><strong>Transit damage:</strong> reported with photographic evidence within 48 hours of delivery. We assist with the courier claim and prioritise replacement or credit.</li> <li><strong>No returns for handmade variation:</strong> as described in Section 11, natural variation is an inherent feature of handmade products and does not constitute a returnable defect.</li> </ul> <div class="terms-note" > <div class="terms-note-icon" >🤝</div> <div class="terms-note-body" ><strong>Our promise:</strong> we have never had a retail partner feel stranded with a quality problem. If something is wrong with your order, tell us immediately — we will find a resolution that is fair to your business, even if the strict terms do not require us to.</div> </div> </section> <hr class="terms-divider" > < !-- ── 14. INTELLECTUAL PROPERTY ─────────────────────────── --> <section class="terms-section" id="s-ip" > <div class="section-header" > <div class="section-num" >14</div> <div class="section-title-group" > <div class="section-tag" >Brand</div> <h2 class="section-title" >Intellectual <em>Property</em></h2> </div> </div> <p>The Puffy Companion name, all character names and designs, all photography, all story card copy, and all associated brand materials are the intellectual property of Puffy Companion. Retail partners are granted a limited, non-exclusive licence to use these assets solely for the purpose of retailing our companions and promoting their sale.</p> <p><strong>You may:</strong></p> <ul class="clause-list" > <li>Use our supplied photography on your website, social media, email newsletters, and in-store displays.</li> <li>Reproduce our character names and story card text in your own product descriptions, provided the content is not modified.</li> <li>Tag us on social media and use our brand name in promotional copy (@puffycompanion).</li> <li>Display our brand materials, POS materials, and story cards in your retail environment.</li> </ul> <p><strong>You may not:</strong></p> <ul class="clause-list" > <li>Modify, recolour, crop, or otherwise alter our photography in ways that misrepresent the product.</li> <li>Create your own photography of our companions for commercial use without written permission.</li> <li>Use our brand name to imply an endorsement or partnership beyond your retail stockist relationship.</li> <li>Reproduce or replicate any companion design, pattern, or character concept in any form.</li> </ul> </section> <hr class="terms-divider" > < !-- ── 15. MARKETING SUPPORT ──────────────────────────────── --> <section class="terms-section" id="s-marketing" > <div class="section-header" > <div class="section-num" >15</div> <div class="section-title-group" > <div class="section-tag" >Support</div> <h2 class="section-title" >Marketing <em>Support</em></h2> </div> </div> <p>We believe that giving you the tools to sell confidently is part of our responsibility as a wholesale partner. We do not simply ship you a box of dolls and wish you luck. Every retail partner receives a suite of marketing assets and ongoing support as part of the partnership.</p> <p><strong>Included with every opening order:</strong></p> <ul class="clause-list" > <li><strong>High-resolution product photography</strong> — clean background product shots and lifestyle images for every character, ready for website and social use.</li> <li><strong>Physical emotion story cards</strong> — one branded story card per companion, included with each individual unit as a gift-ready narrative tool.</li> <li><strong>Digital brand asset pack</strong> — logos, colour palette, brand copy templates, and Instagram caption suggestions for launch week.</li> <li><strong>Wholesale sell sheet</strong> — a one-page summary of the collection for any buyer who walks into your shop and asks about the brand.</li> <li><strong>Instagram feature</strong> — every new retail partner is featured on our Instagram and mentioned in our wholesale newsletter, driving awareness of your stockist status.</li> </ul> <p><strong>Ongoing throughout the partnership:</strong></p> <ul class="clause-list" > <li>Seasonal lookbooks and new character previews, shared before the general public.</li> <li>Social media content calendar suggestions aligned with our character drops.</li> <li>Response to any customer questions about the brand that you forward to us — we will always help you help your customers.</li> <li>Invitation to partner-only pre-order windows for limited seasonal editions.</li> </ul> </section> <hr class="terms-divider" > < !-- ── 16. SEASONAL COLLECTIONS ───────────────────────────── --> <section class="terms-section" id="s-seasonal" > <div class="section-header" > <div class="section-num" >16</div> <div class="section-title-group" > <div class="section-tag" >Collections</div> <h2 class="section-title" >Seasonal Collections & <em>Limited Drops</em></h2> </div> </div> <p>Beyond the permanent core collection, Puffy Companion releases seasonal character drops that create urgency, freshness, and a reason for customers to return. These are intentionally limited — once the production run is sold, it is not repeated.</p> <div class="clause-grid" > <div class="clause-card" > <div class="clause-label" >Christmas Collection</div> <div class="clause-value" >Oct–Dec</div> <div class="clause-detail" >Pre-order window opens in August. Limited trio and duo gift sets. Historically our fastest-selling collection — pre-order allocation is first-come, first-served.</div> </div> <div class="clause-card sage" > <div class="clause-label" >Valentine's Collection</div>
+ <div class="clause-value" >Jan–Feb</div> <div class="clause-detail" >Pre-order window opens in November. Couples, "for the one who needs hope" editions, and gift-ready duo sets. High AOV (Average Order Value) period.</div> </div> <div class="clause-card" > <div class="clause-label" >Spring / New Arrivals</div> <div class="clause-value" >Mar–May</div> <div class="clause-detail" >New core characters or special editions released to refresh the range. Partners receive early preview and first ordering window before public announcement.</div> </div> <div class="clause-card gold" > <div class="clause-label" >Partner-Exclusive Drops</div> <div class="clause-value" >As available</div> <div class="clause-detail" >Occasionally, a limited character is produced exclusively for wholesale partners. These are never sold direct-to-consumer. Existing partners are notified first.</div> </div> </div> <p>Seasonal collections are produced in strictly limited quantities. Retail partners who have placed a seasonal pre-order are guaranteed their allocation. Partners who order after the pre-order window are subject to availability and may not be able to access the full collection.</p> </section> <hr class="terms-divider" > < !-- ── 17. PARTNER BENEFITS ───────────────────────────────── --> <section class="terms-section" id="s-benefits" > <div class="section-header" > <div class="section-num" >17</div> <div class="section-title-group" > <div class="section-tag" >Partnership Value</div> <h2 class="section-title" >Partner <em>Benefits</em></h2> </div> </div> <p>Our partners are not customers. They are collaborators. As your partnership with Puffy Companion grows, so does the value we offer in return. The following benefits scale with your ordering history and partnership length.</p> <table class="clause-table" > <thead><tr><th>Benefit</th><th>All Partners</th><th>Established Partners (3+ orders)</th><th>Priority Partners (1+ year)</th></tr></thead> <tbody> <tr><td>Marketing asset pack</td><td class="highlight" >✓ Included</td><td class="highlight" >✓ Included</td><td class="highlight" >✓ Extended</td></tr> <tr><td>Instagram feature on onboarding</td><td class="highlight" >✓ One post</td><td class="highlight" >✓ Ongoing tags</td><td class="highlight" >✓ Story features</td></tr> <tr><td>Seasonal pre-order access</td><td class="highlight" >✓ Standard</td><td class="highlight" >✓ Priority window</td><td class="highlight" >✓ First window</td></tr> <tr><td>Territory protection</td><td>Soft (5 miles)</td><td class="highlight" >Formal soft territory</td><td class="highlight" >Exclusivity available</td></tr> <tr><td>Dedicated account contact</td><td>Shared inbox</td><td class="highlight" >Named contact</td><td class="highlight" >Direct mobile access</td></tr> <tr><td>Custom / bespoke character consultation</td><td>—</td><td>On application</td><td class="highlight" >✓ Available</td></tr> <tr><td>Partner-only character drops</td><td>—</td><td class="highlight" >✓ Invited</td><td class="highlight" >✓ Priority allocation</td></tr> </tbody> </table> </section> <hr class="terms-divider" > < !-- ── 18. TERM & TERMINATION ─────────────────────────────── --> <section class="terms-section" id="s-term" > <div class="section-header" > <div class="section-num" >18</div> <div class="section-title-group" > <div class="section-tag" >Duration</div> <h2 class="section-title" >Term & <em>Termination</em></h2> </div> </div> <p>The wholesale partnership is ongoing and does not have a fixed end date. Either party may end the relationship at any time, provided in-progress orders are fulfilled and outstanding payments are settled.</p> <ul class="clause-list" > <li><strong>By the retail partner:</strong> written notice (email) at any time. Orders already in production will be completed and invoiced. Cancellation of a confirmed order after the deposit has been paid and production has commenced will result in forfeiture of the deposit.</li> <li><strong>By Puffy Companion:</strong> we reserve the right to suspend or end a retail partnership in the event of MAP violation, online sales policy breach, non-payment, or conduct that we believe is harmful to the brand or to other retail partners. In non-urgent cases, we will provide 30 days notice and allow existing stock to be sold through.</li> <li><strong>Inactivity:</strong> a partner who has not placed an order in 12 consecutive months will be considered inactive. Inactive partners lose soft territory protection. Reactivation is welcome — simply place a new order or contact us to reconnect.</li> </ul> <p>These terms are governed by the laws of Turkey and the Republic of Turkey's commercial courts hold jurisdiction. In practice, we greatly prefer to resolve any disagreement by conversation — and we commit to approaching any dispute that way first. We have never needed to invoke legal remedies with a retail partner, and we do not expect to.</p>
+ <div class="terms-note" > <div class="terms-note-icon" >📋</div> <div class="terms-note-body" >These terms were last updated in January 2026 and supersede all previous versions. Material changes to terms are communicated to active partners by email with a minimum of 30 days notice before taking effect. Continued ordering after a terms update constitutes acceptance of the updated terms.</div> </div> </section> < !-- FINAL CTA --> <div class="terms-cta" > <h3>Ready to become a <em>partner?</em></h3> <p>Book a 30-minute buyer call or submit your wholesale enquiry. We will respond within 24 hours and send your full lookbook and catalogue the same day.</p> <div class="terms-cta-btns" > <a href="https://calendly.com/fzehradinc00/30-minute-meeting-clone" target="_blank" class="btn-primary" >Book a Call on Calendly →</a> <a href="puffy-main.html#booking" class="btn-ghost" >Submit Enquiry Form</a> </div> </div> </main> </div> <script> function setActive(el) {
+        document.querySelectorAll('.toc-link').forEach(l=> l.classList.remove('active'));
+        el.classList.add('active');
+    }
+
+    // Auto-highlight active section in TOC on scroll
+    const sections=document.querySelectorAll('.terms-section');
+    const tocLinks=document.querySelectorAll('.toc-link');
+
+    const observer=new IntersectionObserver((entries)=> {
+            entries.forEach(entry=> {
+                    if (entry.isIntersecting) {
+                        const id=entry.target.id;
+
+                        tocLinks.forEach(link=> {
+                                link.classList.toggle('active', link.getAttribute('href')==='#' + id);
+                            });
+                    }
+                });
+        }
+
+        , {
+        rootMargin: '-20% 0px -60% 0px', threshold: 0
+    });
+sections.forEach(s=> observer.observe(s));
+</script> </body> </html>
