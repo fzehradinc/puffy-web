@@ -1,0 +1,68 @@
+File size: 5288553
+
+--- MATCH FOUND FOR: fetch\( at 5287139 ---
+
+            lastName: form.lastName.value.trim(),
+            email: form.email.value.trim(),
+            shopName: form.shopName.value.trim(),
+            phone: form.phone.value.trim(),
+            website: form.website.value.trim(),
+            country: form.country.value,
+            retailType: form.retailType.value,
+            message: form.message.value.trim(),
+            timestamp: new Date().toISOString(),
+            source: 'Wholesale Website'
+    }
+
+    ;
+
+    try {
+        await fetch(SHEETS_WEBHOOK_URL, {
+
+            method : 'POST',
+            mode : 'no-cors',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+
+            ,
+            body : JSON.stringify(data)
+        });
+
+    btn.textContent='Ô£ô Sent! Your lookbook is on its way.';
+    btn.style.background='#8EA48A';
+    status.style.display='block';
+    status.style.background='#F0F7F0';
+    status.style.color='#2D5A3D';
+    status.style.border='1px solid #8EA48A';
+    status.textContent='­şî© Thank you! We will send your lookbook within 24 hours and reach out to discuss your order. ÔÇö Puffy Companion Wholesale Team';
+    form.reset();
+}
+
+catch (err) {
+    btn.textContent='Send Request & Receive Lookbook ÔåÆ';
+    btn.disabled=false;
+    status.style.display='block';
+    status.style.background='#FFF5F5';
+    status.style.color='#C05545';
+    status.style.border='1px solid #C05545';
+    status.textContent='Connection issue ÔÇö please email us directly at puffycompanion@gmail.com and we will respond within 24h.';
+}
+}
+
+// Scroll reveal
+const observer=new IntersectionObserver((entries)=> {
+        entries.forEach(entry=> {
+                if(entry.isIntersecting) entry.target.classList.add('visible');
+            });
+    }
+
+    , {
+    threshold:0.07, rootMargin:'0px 0px -40px 0px'
+});
+document.querySelectorAll('.reveal').forEach(el=> observer.observe(el));
+</script></body></html>
+
+--- FORM HTML (CLEANED) ---
+<form class="booking-form" id="wholesaleForm" onsubmit="handleSubmit(event)"><div class="form-row"><div class="form-group"><label class="form-label">First Name *</label><input type="text" name="firstName" class="form-input" placeholder="Jane" required></div><div class="form-group"><label class="form-label">Last Name *</label><input type="text" name="lastName" class="form-input" placeholder="Smith" required></div></div><div class="form-row"><div class="form-group"><label class="form-label">Business Email *</label><input type="email" name="email" class="form-input" placeholder="jane@yourshop.com" required></div><div class="form-group"><label class="form-label">Shop / Business Name *</label><input type="text" name="shopName" class="form-input" placeholder="Your shop name" required></div></div><div class="form-row"><div class="form-group"><label class="form-label">Phone / WhatsApp</label><input type="text" name="phone" class="form-input" placeholder="+44 7700 000000"></div><div class="form-group"><label class="form-label">Website / Instagram</label><input type="text" name="website" class="form-input" placeholder="yourshop.com or @yourshop"></div></div><div class="form-row"><div class="form-group"><label class="form-label">Country *</label><select name="country" class="form-select" required><option value="">Select countryÔÇĞ</option><option>United Kingdom</option><option>United States</option><option>Germany</option><option>France</option><option>Netherlands</option><option>Australia</option><option>Canada</option><option>Turkey</option><option>Other</option></select></div><div class="form-group"><label class="form-label">Retail Type *</label><select name="retailType" class="form-select" required><option value="">Select typeÔÇĞ</option><option>Independent Boutique</option><option>Gift Shop</option><option>Department Store</option><option>Craft Market / Fair</option><option>Online Retailer</option><option>Museum / Gallery Shop</option><option>Other</option></select></div></div><div class="form-group"><label class="form-label">Message (optional)</label><textarea name="message" class="form-input" rows="3" placeholder="Tell us about your shop, how many units you're thinking, any questionsÔÇĞ" style="resize:vertical;font-family:inherit;"></textarea></div><button type="submit" class="form-submit" id="submitBtn">Send Request & Receive Lookbook ÔåÆ</button><div class="form-note">One follow-up from our wholesale team only. No spam,
+ever.</div><div id="formStatus" style="display:none;margin-top:16px;padding:14px 20px;border-radius:8px;font-size:14px;text-align:center;"></div></form>
